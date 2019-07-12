@@ -1,0 +1,88 @@
+<!--
+  index.html
+  Written by Petar Zdravkov - Digital Innovation Lab
+  JH Syngenta UK
+
+  Description:
+    Browser only game based on the popular whack a mole game. Written for the
+    Big Bang Fair. Precision Agriculture theme.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data -->
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Whack A Weed</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- Stylesheet -->
+  <link href="./style/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Script -->
+  <script src="./js/app.js"></script>
+  <!-- Working pane -->
+  <div id="pane">
+    <!-- Score pane -->
+    <div id="scoreboard">
+      <!-- Title -->
+      <div class="info-box">Whack A Weed</div>
+      <!-- Info pane -->
+      <div id="score-box" class="data-box">
+        <!-- Lives -->
+        <div id="live">
+          <img class="lv-img" src="./assets/heart.png" height="42" width="42" hspace="20"/>
+          <img class="lv-img" src="./assets/heart.png" height="42" width="42" hspace="20"/>
+          <img class="lv-img" src="./assets/heart.png" height="42" width="42" hspace="20"/>
+        </div>
+        <!-- Score & level -->
+        <div id="live-score">
+          <h1 id="h1-score">0</h1>
+          <p>SCORE</p>
+          <h1 id="h1-level">1</h1>
+          <p>LEVEL</p>
+        </div>
+      </div>
+      <!-- Game start button -->
+      <div id="button-box">
+        <button class="button" id="start_button">Start a new game!</button>
+      </div>
+    </div>
+    <!-- Game elements -->
+    <div id="gameboard">
+      <div class="grid-container">
+        <div class="game-box" id="box0" state="0"></div>
+        <div class="game-box" id="box1" state="0"></div>
+        <div class="game-box" id="box2" state="0"></div>
+        <div class="game-box" id="box3" state="0"></div>
+        <div class="game-box" id="box4" state="0"></div>
+        <div class="game-box" id="box5" state="0"></div>
+        <div class="game-box" id="box6" state="0"></div>
+        <div class="game-box" id="box7" state="0"></div>
+        <div class="game-box" id="box8" state="0  "></div>
+      </div>
+    </div>
+<!-- Ranking board -->
+    <div id="infoboard">
+      <div class="info-box">Top 15</div>
+      <div id="ranking-box" class="data-box"></div>
+    </div>
+  </div>
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Game Over</h2>
+    </div>
+    <div class="modal-body">
+      <p id="final-score"></p>
+      <p>Please, try again!</p>
+      <h3>Save your result</h3>
+      <input id="name-input" type="text" placeholder="Enter Your Name" name="name">
+      <button id="submit-btn" class="button">Submit</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
